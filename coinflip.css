@@ -1,0 +1,16 @@
+body{
+	background-image: url("http://s3.amazonaws.com/rapgenius/tumblr_mj9a5iHOsG1rjkse1o1_500.png");
+	font-family: serif;
+	color: #A
+}
+
+.flip{
+	padding: 10px 11px;
+	background-image: url("http://www.futuremarketsinc.com/wp-content/uploads/2015/03/gold-05.jpg");
+	color: #1AF9D7;
+}
+
+#flip{
+	height: 50px;
+	width: 50px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A good ol' coinflip</title>
+</head>
+<link rel="stylesheet" type="text/css" href="coinflip.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<img src="http://img4.wikia.nocookie.net/__cb20140520034130/mariokart/images/1/17/CoinMK8.png" onclick="coinflip()" class="flip" id="flip">
+</img>
+
+<button onclick="displayResults()"> Press this button to display the results of the coinflip
+</button>
+
+<button onclick="reset()"> Press this button to reset the results of the coinflip app
+</button>
+
+<br>
+<p id="p1"> Press this button to perform a coinflip </p>
+<p id="p2"> Press this button to display results</p>
+<p id = "demo"></p>
+
+
+
+<script type="text/javascript">
+	var heads = 0;
+	var tails = 0;
+
+	function coinflip()
+	{
+		var coin = Math.floor((Math.random()*2)+1);
+		
+		
+		if(coin == 1)
+		{
+			document.getElementById("demo").style.color = "blue";
+			document.getElementById("demo").innerHTML = "Heads";
+			heads++;
+		}
+		else
+		{
+			document.getElementById("demo").style.color = "red";
+			document.getElementById("demo").innerHTML = "Tails";
+			tails++;
+		}
+
+	}
+
+	function displayResults()
+	{
+		alert("Heads: " + heads + "\n" + "Tails: " + tails);
+	}
+
+	function reset()
+	{
+		var x;
+		if(confirm("Reset the results?") == true)
+		{
+			x = alert("Results have been reset");
+			heads = 0;
+			tails = 0;
+		}
+	}
+</script>
+</body>
+l
